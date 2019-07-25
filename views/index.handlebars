@@ -9,29 +9,37 @@
 
 <div class="row">
     <div class="col-lg-4">
-        <h5>Burgers available:</h5>
+        <h5 style="text-decoration:underline;">Burgers available:</h5>
         <div class="container text-black my-5"id="burgerList">
-            <ul>{{#each burger}}
-                <li>
-                    	<p><span class="label">ID:</span> {{this.id}}</p>
-                        <p><span class="label">Burger</span> {{this.burger}}</p>
-                </li>
-
-            </ul>{{/each}}
+            <ul>
+                    {{#each burger}}
+                    
+                        {{#unless devoured}}
+                    	<p><span class="label">ID:</span> {{this.id}}
+                        <span class="label">Burger</span>   {{this.burger}}
+                        <button class="btn btn-success" data-type={{this.id}}> Devour!</button>
+                        </p>
+                        {{/unless}}
+                    
+                    {{/each}}
+            </ul>
         </div>
         
     </div>
 <img src="../public/assets/img/burger.jpg" class="border rounded-circle" alt="burger image" width="400px" height="400px">
 <div class="col-lg-3">
-    <h5>Devoured:</h5>
-       <div class="container text-black my-5"id="devouredList">
-            <ul>{{#each burger}}
-                <li>
-                    	<p><span class="label">ID:</span> {{this.id}}</p>
-                        <p><span class="label">Burger</span> {{this.burger}}</p>
-                </li>
-
-            </ul>{{/each}}
+    <h5 style="text-decoration:underline;">Devoured:</h5>
+        <div class="container text-black my-5"id="devouredList">
+            <ul>
+                    {{#each burger}}
+                    
+                        {{#if devoured}}
+                    	<p><span class="label">ID:</span> {{this.id}}
+                        <span class="label">Burger</span>   {{this.burger}}</p>
+                        {{/if}}
+                    
+                    {{/each}}
+            </ul>
         </div>
         
 </div>
