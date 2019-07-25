@@ -1,15 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../public/assets/css/burger_style.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    {{{body}}}
-</body>
-</html>
+
+
+
+
+<h1 class="my-5 font-weight-bold text-center">Eat - Da - Burger!</h1>
+
+<h3 class="my-5 font-weight-bold text-center text-wrap">Below you will have the choices to eat a burger or you can Add a burger of your chosing before you devour it!</h3>
+<div class="container my-5">
+
+<div class="row">
+    <div class="col-lg-4">
+        <h5>Burgers available:</h5>
+        <div class="container text-black my-5"id="burgerList">
+            <ul>{{#each burger}}
+                <li>
+                    	<p><span class="label">ID:</span> {{this.id}}</p>
+                        <p><span class="label">Burger</span> {{this.burger}}</p>
+                </li>
+
+            </ul>{{/each}}
+        </div>
+        
+    </div>
+<img src="../public/assets/img/burger.jpg" class="border rounded-circle" alt="burger image" width="400px" height="400px">
+<div class="col-lg-3">
+    <h5>Devoured:</h5>
+       <div class="container text-black my-5"id="devouredList">
+            <ul>{{#each burger}}
+                <li>
+                    	<p><span class="label">ID:</span> {{this.id}}</p>
+                        <p><span class="label">Burger</span> {{this.burger}}</p>
+                </li>
+
+            </ul>{{/each}}
+        </div>
+        
+</div>
+  
+</div>
+</div>
+<h3 class="text-center my-3">Enter a name of a burger you would like to add.</h3>
+<div class="d-flex justify-content-center">
+<input type="text" id="burgerName"style="width:300px; height:auto;" placeholder="Burger name goes here!"></input>
+<button id= "burgerSubmission" class="btn btn-primary mx-2">Add Burger</button>
+</div>
