@@ -1,5 +1,5 @@
 var orm=require('../config/orm')
-console.log(orm+'burger.js')
+
 
 var burger={
     all:function(cb){

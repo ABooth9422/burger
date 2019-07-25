@@ -16,7 +16,7 @@
                         {{#unless devoured}}
                     	<p><span class="label">ID:</span> {{this.id}}
                         <span class="label">Burger</span>   {{this.burger}}
-                        <button class="btn btn-success" data-type={{this.id}}> Devour!</button>
+                        <button class="devourBtn btn btn-success mx-2" data-type={{this.id}}> Devour!</button>
                         </p>
                         {{/unless}}
                     {{/each}}
@@ -47,5 +47,5 @@
 <h3 class="text-center my-3">Enter a name of a burger you would like to add.</h3>
 <div class="d-flex justify-content-center">
 <input type="text" id="burgerName"style="width:300px; height:auto;" placeholder="Burger name goes here!"></input>
-<button id= "burgerSubmission" class="btn btn-primary mx-2">Add Burger</button>
+<button id= "submitBurger" class="btn btn-primary mx-2">Add Burger</button>
 </div>

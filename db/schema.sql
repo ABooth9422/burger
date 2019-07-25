@@ -8,6 +8,7 @@ USE  burger_db;
 CREATE TABLE burgers (
     id int NOT NULL AUTO_INCREMENT,
     burger VARCHAR(30),
-    devoured BOOLEAN NOT NULL,
-    PRIMARY KEY(id)
+    devoured BOOLEAN DEFAULT FALSE,
+    PRIMARY KEY(id),
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )

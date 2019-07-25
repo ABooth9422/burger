@@ -12,8 +12,9 @@ var orm={
 
     },
     insertOne:function(name,devoured,cb){
-        var query= `INSERT INTO burger VALUES (?)`
-        connection.query(query,[name,devoured],function(err,resp){
+        var query= `INSERT INTO burgers (burger,devoured) VALUES (?,?)`
+        connection.query(query,name,devoured,function(err,resp){
+            console.log(resp+'object from query')
             if (err) throw err
             cb(resp)
         })
