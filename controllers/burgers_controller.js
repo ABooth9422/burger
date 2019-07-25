@@ -26,7 +26,7 @@ router.post('/addBurger',function(req,resp){
            console.log('burger added') 
            console.log(data+'data')
     })
-
+    resp.redirect('/')
 
 })
 
