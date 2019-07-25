@@ -13,14 +13,12 @@
         <div class="container text-black my-5"id="burgerList">
             <ul>
                     {{#each burger}}
-                    
                         {{#unless devoured}}
                     	<p><span class="label">ID:</span> {{this.id}}
                         <span class="label">Burger</span>   {{this.burger}}
                         <button class="btn btn-success" data-type={{this.id}}> Devour!</button>
                         </p>
                         {{/unless}}
-                    
                     {{/each}}
             </ul>
         </div>
