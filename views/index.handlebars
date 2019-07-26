@@ -8,15 +8,17 @@
 <div class="container my-5">
 
 <div class="row">
-    <div class="col-lg-3">
+    <div class="col-lg-4">
         <span class="badge badge-primary"><h5 style="text-decoration:underline;">Burgers available:</h5></span>
         <div class="container d-flex justify-content-start text-black my-2"id="burgerList">
             <ul>
+            
              {{#each burger}}
             {{#unless devoured}}
-            <p style="text-decoration:underline;"><span class="label">ID:{{this.id}}</span>
-            <span class="label">{{this.burger}}</span> 
-            <button class="devourBtn btn btn-success mx-1 mb-2" data-type={{this.id}}><img src="https://static.thenounproject.com/png/641156-200.png" width="30" height="30" alt="burger emoji"></button></p>
+            
+            <li style="text-decoration:underline;">ID:{{this.id}}
+            {{this.burger}}
+            <button class="devourBtn btn btn-success rounded-circle mx-1 mb-2" data-type={{this.id}}><img src="https://static.thenounproject.com/png/641156-200.png" width="30" height="30" alt="burger emoji"></button></li>
                         
             {{/unless}}
             {{/each}}
@@ -24,8 +26,8 @@
         </div>
         
     </div>
-    <div class="col-lg-5">
-<img src="../public/assets/img/burger.jpg" class="border rounded-circle" alt="burger image" width="400px" height="400px">
+    <div class="col-lg-4">
+<img src="../public/assets/img/burger.jpg" class="border rounded-circle" alt="burger image" width="300px" height="300px">
 </div>
 <div class="col-lg-4">
    <span class="badge badge-primary"><h5 style="text-decoration:underline;">Devoured:</h5></span>
@@ -34,9 +36,9 @@
                     {{#each burger}}
                     
                         {{#if devoured}}
-                    	<p><span class="label">ID:{{this.id}}</span>
-                        <span class="label">{{this.burger}}</span>
-                        <button class="deleteBtn btn btn-danger rounded-circle mx-2" data-type={{this.id}}><img width="30"height="30"src="http://cdn.shopify.com/s/files/1/1061/1924/products/Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_grande.png?v=1480481059" alt="delete"></button></p>
+                    	<li style="text-decoration:underline;">ID:{{this.id}}
+                        {{this.burger}}
+                        <button class="deleteBtn btn btn-danger rounded-circle mx-2" data-type={{this.id}}><img width="30"height="30"src="http://cdn.shopify.com/s/files/1/1061/1924/products/Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_grande.png?v=1480481059" alt="delete"></button></li>
                         {{/if}}
                     
                     {{/each}}
