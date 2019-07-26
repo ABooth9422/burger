@@ -10,20 +10,24 @@
 
 ### 🏠 [Homepage](https://github.com/ABooth9422/burger)
 
+## Burger
+![](public/assets/img/burgermain.jpg)
+
 ## Install
 
 ```sh
 web based application visit site to begin
 ```
+
 ## Usage!
 
 Below there will be a list of pre-existing burgers that we have created in the my-sql database. If you
 
 would like to devour one of these tasty burgers you can click on the button next to the burger. If you would
 
-like to delete the burger from the table by clicking once it has been devoured you can do so by clicking the button besidethe burger.
+like to delete the burger from the table by clicking once it has been devoured you can do so by clicking the button beside 
 
-You also have the option to add any burger that you like to the menu before it is devoured!
+the burger. You also have the option to add any burger that you like to the menu before it is devoured!
 
 ## Author
 
