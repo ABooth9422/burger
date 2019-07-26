@@ -15,6 +15,12 @@
 ```sh
 web based application visit site to begin
 ```
+## Usage!
+
+Below there will be a list of pre-existing burgers that we have created in the my-sql database. If you
+would like to devour one of these tasty burgers you can click on the button next to the burger. If you would
+like to delete the burger from the table by clicking ![](http://cdn.shopify.com/s/files/1/1061/1924/products/Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_grande.png?v=1480481059) once it has been devoured you can do so by clicking the button beside
+the burger.
 
 ## Author
 
