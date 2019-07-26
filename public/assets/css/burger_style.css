@@ -4,4 +4,6 @@ body{
     font-family: 'Anton', sans-serif;
     
 }
-
+.deleteBtn{
+    background-color:crimson;
+}
