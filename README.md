@@ -11,7 +11,7 @@
 ### 🏠 [Homepage](https://github.com/ABooth9422/burger)
 
 ## Burger
-![](public/assets/img/burgermain.jpg)
+![](public/assets/img/burgermain.png)
 
 ## Install
 
