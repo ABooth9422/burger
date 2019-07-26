@@ -13,7 +13,7 @@ var orm={
     },
     insertOne:function(name,devoured,cb){
         var query= `INSERT INTO burgers (burger,devoured) VALUES (?,?)`
-        connection.query(query,name,devoured,function(err,resp){
+        connection.query(query,[name,devoured],function(err,resp){
             console.log(resp+'object from query')
             if (err) throw err
             cb(resp)
@@ -22,11 +22,9 @@ var orm={
 
     },
     updateOne:function(table,id,cb){
-        var query=`UPDATE` + table
-        query+=`SET devoured=1`
-        query+=`WHERE (?)`
-
-        connection.query(query,[name,id],function(err,resp){
+        var query=`UPDATE ?? SET devoured =1 WHERE ID = ? `
+       
+        connection.query(query,[table,id],function(err,resp){
             if(err) throw err
 
             cb(resp)

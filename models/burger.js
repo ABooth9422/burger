@@ -9,13 +9,13 @@ var burger={
     },
 
     create:function(name,devoured,cb){
-        orm.insertOne(name,devoured),function(res){
+        orm.insertOne(name,devoured,function(res){
             cb(res)
-        }
+        })
     },
 
-    update:function(id,name,cb){
-        orm.updateOne('burgers',name,id,cb),function(res){
+    update:function(id,cb){
+        orm.updateOne('burgers',id,cb),function(res){
             cb(res)
         }
     }

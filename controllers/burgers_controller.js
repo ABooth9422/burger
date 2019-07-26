@@ -21,16 +21,22 @@ router.post('/addBurger',function(req,resp){
     console.log(name)
     console.log(devoured)
     burger.create(
-        [name,devoured],
+        name,devoured,
         function(data){
            console.log('burger added') 
-           console.log(data+'data')
+           
     })
     resp.redirect('/')
 
 })
 
-router.put('/update',function(req,resp){
+router.post('/update',function(req,resp){
+    
+    
+    
+    burger.update(req.body.id,function(result){
+       resp.status(200).end()
+    })
 
 })
 

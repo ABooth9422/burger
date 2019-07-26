@@ -15,4 +15,12 @@ $(document).ready(function(){
 
 
 })
+    $(".devourBtn").on('click',function(){ 
+        var update ={
+             id:$(this).attr('data-type')}
+        $.post("/update", update, function(data){
+            location.reload();
+        })
+    })
+    
 })
