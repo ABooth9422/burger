@@ -31,6 +31,17 @@ var orm={
         })
     
 
+    },
+    deleteOne:function(table,id,cb){
+        
+        var query=`DELETE FROM ?? WHERE ID = ? `
+       
+        connection.query(query,[table,id],function(err,resp){
+            if(err) throw err
+
+            cb(resp)
+        })
+
     }
 }
 

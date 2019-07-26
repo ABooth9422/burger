@@ -30,9 +30,13 @@ router.post('/addBurger',function(req,resp){
 
 })
 
+router.delete('/delete',function(req,resp){
+    burger.delete(req.body.id,function(result){
+        resp.status(200).end()
+    })
+})
+
 router.post('/update',function(req,resp){
-    
-    
     
     burger.update(req.body.id,function(result){
        resp.status(200).end()

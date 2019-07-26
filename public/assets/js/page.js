@@ -22,5 +22,19 @@ $(document).ready(function(){
             location.reload();
         })
     })
+
+    $(".deleteBtn").on('click',function(){
+        console.log('clicked')
+        var update={
+            id:$(this).attr('data-type')
+        }
+        $.ajax('/delete',{
+            type: 'DELETE',
+            data:update
+        }).then(function(data){
+            console.log('deleted')
+            location.reload()
+        })
+    })
     
 })
