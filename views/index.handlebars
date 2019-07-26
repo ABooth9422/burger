@@ -11,7 +11,7 @@
     <div class="col-lg-3">
         <span class="badge badge-primary"><h5 style="text-decoration:underline;">Burgers available:</h5></span>
         <div class="container d-flex justify-content-start text-black my-2"id="burgerList">
-            
+            <ul>
              {{#each burger}}
             {{#unless devoured}}
             <p style="text-decoration:underline;"><span class="label">ID:{{this.id}}</span>
@@ -20,7 +20,7 @@
                         
             {{/unless}}
             {{/each}}
-            
+            </ul>
         </div>
         
     </div>
