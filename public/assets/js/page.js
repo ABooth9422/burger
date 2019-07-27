@@ -18,9 +18,12 @@ $(document).ready(function(){
     $(".devourBtn").on('click',function(){ 
         var update ={
              id:$(this).attr('data-type')}
-        $.post("/update", update, function(data){
-            location.reload();
-        })
+            $.ajax("/update",{
+                type:'PUT',
+                data:update
+            }).then(function(data){
+                location.reload();
+            })
     })
 
     $(".deleteBtn").on('click',function(){

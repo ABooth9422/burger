@@ -36,7 +36,7 @@ router.delete('/delete',function(req,resp){
     })
 })
 
-router.post('/update',function(req,resp){
+router.put('/update',function(req,resp){
     
     burger.update(req.body.id,function(result){
        resp.status(200).end()
